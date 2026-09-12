@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: #0f0f13;
+}
+
+body {
+  color: #ededf0;
+  font-family: var(--font-grotesk), sans-serif;
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.035) 1px, transparent 0);
+  background-size: 22px 22px;
+}
+
+::selection {
+  background: #8c7cf055;
+  color: #fff;
+}
+
+/* thin, quiet scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #2c2c36;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3a3a46;
+}
+
+/* ---- React Flow theme overrides ---- */
+.react-flow {
+  background: transparent;
+}
+.react-flow__attribution {
+  display: none;
+}
+.react-flow__edge-path {
+  stroke: #3a3a46;
+  stroke-width: 1.5;
+}
+.react-flow__edge.selected .react-flow__edge-path,
+.react-flow__edge:hover .react-flow__edge-path {
+  stroke: #8c7cf0;
+}
+.react-flow__edge.root-edge .react-flow__edge-path {
+  stroke: #f0b429;
+  stroke-dasharray: 5 4;
+}
+.react-flow__handle {
+  width: 7px;
+  height: 7px;
+  background: #5c5c66;
+  border: 1px solid #0f0f13;
+}
+.react-flow__handle:hover {
+  background: #8c7cf0;
+}
+.react-flow__controls {
+  background: #18181f;
+  border: 1px solid #2c2c36;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: none;
+}
+.react-flow__controls-button {
+  background: #18181f;
+  border-bottom: 1px solid #2c2c36;
+  color: #ededf0;
+}
+.react-flow__controls-button:hover {
+  background: #202029;
+}
+.react-flow__controls-button svg {
+  fill: #ededf0;
+}
+
+.edge-label-chip {
+  font-family: var(--font-grotesk), sans-serif;
+  font-size: 11px;
+  color: #d8d4fb;
+  background: #1a1626;
+  border: 1px solid #3a3160;
+  padding: 2px 8px;
+  border-radius: 999px;
+  white-space: nowrap;
+  pointer-events: all;
+}
